@@ -20,3 +20,16 @@ function toggle() {
     document.getElementById("card-name").innerText = users[curIndex].name
     document.getElementById("card-gender").innerText = users[curIndex].gender
 }
+function random() {
+    fetch('https://randomuser.me/api')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            var details = data.results[0];
+            document.getElementById("card-image").src = details.picture.large
+            document.getElementById("card-gender").innerText = details.gender
+            var fullname = details.name.title + " " + details.name.first + " " + details.name.last
+            document.getElementById("card-name").innerText = fullname
+        })
+}
