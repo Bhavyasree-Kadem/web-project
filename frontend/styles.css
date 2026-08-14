@@ -18,6 +18,7 @@ h1 {
 
 body {
     background-color: antiquewhite;
+    margin: 0;
 }
 
 .card button {
@@ -29,4 +30,23 @@ body {
 
 .card img {
     width: 100%;
+}
+
+.navbar {
+    text-align: center;
+    border: 3px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: gray;
+    margin-right: 25px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: black;
 }
